@@ -366,7 +366,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const commandSpan = document.querySelector(".command-text");
 
   if (terminalContainer && terminalContent && commandSpan) {
-    const commandText = "Access https://github.com/GabrielManciniPinheiro";
+    const commandText = "https://github.com/GabrielManciniPinheiro";
 
     // 1. Adiciona o cursor piscante fixo (assim ele pisca mesmo quando o texto some)
     const cursor = document.createElement("span");
