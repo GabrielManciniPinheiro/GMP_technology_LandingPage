@@ -158,16 +158,16 @@ document.addEventListener("DOMContentLoaded", function () {
         nav_skills: "Skills",
         nav_projects: "Projects",
         nav_contact: "Contact",
-        hero_title_1: "The",
-        hero_title_highlight: "React Developer",
-        hero_title_2: "For The Web",
+        hero_title_1: "We Deliver",
+        hero_title_highlight: "Scalable Digital Solutions",
+        hero_title_2: "for your business",
         hero_subtitle_1: "Creating",
         hero_subtitle_bold: "high-quality web applications",
         hero_subtitle_2:
           "with modern tools and best practices for exceptional user experiences.",
         hero_view_projects: "View Projects",
         hero_learn_more: "Learn More",
-        features_title: "What's in my Toolkit",
+        features_title: "Toolkit",
         features_subtitle:
           "Everything needed to build great products on the web.",
         feature_1_title: "Modern UI Design",
@@ -175,46 +175,45 @@ document.addEventListener("DOMContentLoaded", function () {
           "Creating beautiful, responsive interfaces that look great on any device using the latest design trends.",
         feature_2_title: "Clean Code",
         feature_2_desc:
-          "Writing maintainable, efficient code following best practices and modern development standards.",
+          "Writing maintainable, scalable, and efficient code following best practices and modern development standards.",
         feature_3_title: "Performance Optimization",
         feature_3_desc:
           "Ensuring fast load times and smooth experiences through efficient code and asset optimization.",
         feature_4_title: "Responsive Development",
         feature_4_desc:
           "Building websites that work flawlessly across all screen sizes, from phones to large displays.",
-        about_title: "About Me",
+        about_title: "About Us",
         about_p1:
-          "I'm a frontend developer focused on crafting clean & user-friendly experiences.",
+          "Developers focused on crafting clean and scalable experiences.",
         about_p2:
-          "I build responsive websites that are fast, easy to use, and follow best coding practices. My expertise includes HTML, CSS, JavaScript, and modern frameworks to create dynamic, engaging interfaces with clean, optimized code.",
-        about_p3:
-          "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good book.",
-        about_contact_btn: "Contact Me",
+          "We build responsive websites that are fast, easy to use, and follow best coding practices. Our experience includes React, Next.js, TypeScript, HTML, CSS, JavaScript, and modern frameworks to create dynamic interfaces with clean code.",
+        about_p3: "CEO - Gabriel Mancin Pinheiro",
+        about_contact_btn: "Contact Us",
         about_resume_btn: "Download Resume",
-        skills_title: "My Skills",
+        skills_title: "Main Skills",
         skills_subtitle:
-          "Technologies and tools I use to bring products to life",
+          "Technologies and tools we use to bring products to life",
         skill_responsive: "Responsive Design",
         projects_title: "Featured Projects",
-        projects_subtitle: "Check out some of my recent work",
-        proj_1_title: "Crypto Platform",
+        projects_subtitle: "Check out some of our recent work",
+        proj_1_title: "GMP Barber",
         proj_1_desc:
-          "A modern cryptocurrency trading platform with real-time price tracking and portfolio management.",
-        proj_2_title: "AI Landing Page",
+          "A modern SaaS for barbershop scheduling with a real-time administrative dashboard.",
+        proj_2_title: "GMP Wellness",
         proj_2_desc:
-          "A stunning landing page showcasing AI services with interactive animations and modern design.",
-        proj_3_title: "AI Image Detector",
+          "Scheduling SaaS for aesthetic clinics with a real-time administrative dashboard and confirmation emails.",
+        proj_3_title: "GMP Fastfoods",
         proj_3_desc:
-          "An intelligent image detection system that can identify and classify objects in real-time.",
+          "A self-service kiosk system for fast foods integrated with a payment gateway!",
         contact_title: "Get In Touch",
-        contact_subtitle: "Interested in working together? Let's connect",
+        contact_subtitle: "Interested in creating your solution? Let's talk!",
         contact_location: "Location",
-        form_title: "Send Me a Message",
+        form_title: "Send a Message",
         form_name: "Name",
         form_message: "Message",
         form_btn: "Send Message",
         form_sent: "Message Sent!",
-        footer_copy: "&copy; 2026 GMP Technology. All rights reserved.",
+        footer_copy: "All rights reserved.",
       },
       pt: {
         nav_showcase: "Vitrine",
@@ -270,7 +269,7 @@ document.addEventListener("DOMContentLoaded", function () {
         proj_3_desc:
           "Um sistema de totem de pedidos para fastfoods integrado com gateway de pagamento!",
         contact_title: "Entre em Contato",
-        contact_subtitle: "Interessado em criar sua solução? Vamos conversar",
+        contact_subtitle: "Interessado em criar sua solução? Vamos conversar!",
         contact_location: "Localização",
         form_title: "Envie uma Mensagem",
         form_name: "Nome",
@@ -369,51 +368,45 @@ document.addEventListener("DOMContentLoaded", function () {
   if (terminalContainer && terminalContent && commandSpan) {
     const commandText = "Access https://github.com/GabrielManciniPinheiro";
 
-    let i = 0;
-    const typeCommand = () => {
-      if (i < commandText.length) {
-        commandSpan.textContent += commandText.charAt(i);
-        i++;
-        setTimeout(typeCommand, 50);
+    // 1. Adiciona o cursor piscante fixo (assim ele pisca mesmo quando o texto some)
+    const cursor = document.createElement("span");
+    cursor.className =
+      "inline-block w-2 h-5 bg-gray-900 dark:bg-white ml-1 animate-blink align-middle";
+    terminalContent.appendChild(cursor);
+
+    let charIndex = 0;
+    let isDeleting = false;
+
+    const typeEffect = () => {
+      const currentString = commandText.substring(0, charIndex);
+      commandSpan.textContent = currentString;
+
+      // Lógica de Digitar vs Apagar
+      if (!isDeleting && charIndex < commandText.length) {
+        // Se está digitando e ainda não acabou
+        charIndex++;
+        setTimeout(typeEffect, 50); // Velocidade de digitação (50ms)
+      } else if (isDeleting && charIndex > 0) {
+        // Se está apagando e ainda tem texto
+        charIndex--;
+        setTimeout(typeEffect, 30); // Velocidade de apagar (mais rápido: 30ms)
       } else {
-        // Add blinking cursor after typing
-        const cursor = document.createElement("span");
-        cursor.className =
-          "inline-block w-2 h-5 bg-gray-900 dark:bg-white ml-1 animate-blink align-middle";
-        terminalContent.appendChild(cursor);
+        // Se acabou de digitar OU acabou de apagar
+
+        // Inverte o modo (se estava digitando, passa a apagar, e vice-versa)
+        isDeleting = !isDeleting;
+
+        // Define quanto tempo esperar antes de começar a próxima fase
+        // Se acabou de digitar: espera 2.5s para o usuário ler
+        // Se acabou de apagar: espera 0.5s para começar a digitar de novo
+        const waitTime = isDeleting ? 5000 : 500;
+
+        setTimeout(typeEffect, waitTime);
       }
     };
 
-    // Start typing after a delay
-    setTimeout(typeCommand, 1000);
-  } else {
-    // Fallback for original terminal structure
-    const terminal = document.querySelector(".terminal-body");
-    if (terminal) {
-      const commandText = terminal.querySelector(".command").textContent;
-      terminal.querySelector(".command").textContent = "";
-
-      let i = 0;
-      const typeCommand = () => {
-        if (i < commandText.length) {
-          terminal.querySelector(".command").textContent +=
-            commandText.charAt(i);
-          i++;
-          setTimeout(typeCommand, 50);
-        } else {
-          // Add blinking cursor after typing
-          terminal
-            .querySelector(".command")
-            .insertAdjacentHTML(
-              "afterend",
-              '<span class="animate-blink">_</span>'
-            );
-        }
-      };
-
-      // Start typing after a delay
-      setTimeout(typeCommand, 1000);
-    }
+    // Inicia a animação
+    typeEffect();
   }
   // --- EFEITO DE SCROLL NO LOGO HERO ---
   const heroLogo = document.getElementById("hero-logo");
