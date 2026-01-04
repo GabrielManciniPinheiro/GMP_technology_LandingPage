@@ -314,22 +314,43 @@ document.addEventListener("DOMContentLoaded", function () {
         updateLanguage(newLang);
       });
 
-      // Listener especial para o form submit
+      // Form submission handling com Formspree
       const contactForm = document.getElementById("contactForm");
       if (contactForm) {
-        contactForm.addEventListener("submit", function (e) {
+        contactForm.addEventListener("submit", async function (e) {
           e.preventDefault();
-          console.log("Form Submitted");
 
           const button = contactForm.querySelector('button[type="submit"]');
           const originalText = button.textContent;
+          const formData = new FormData(contactForm);
 
-          // Use translation for success message if available
-          button.textContent = translations[currentLang]["form_sent"];
-          contactForm.reset();
+          button.textContent = "Enviando..."; // Feedback imediato
 
+          try {
+            const response = await fetch("https://formspree.io/f/xlgdaeva", {
+              method: "POST",
+              body: formData,
+              headers: {
+                Accept: "application/json",
+              },
+            });
+
+            if (response.ok) {
+              // Sucesso!
+              button.textContent = translations[currentLang]["form_sent"]; // Mensagem traduzida
+              contactForm.reset();
+            } else {
+              // Erro no serviço
+              button.textContent = "Erro ao enviar.";
+            }
+          } catch (error) {
+            // Erro de rede
+            console.error("Erro:", error);
+            button.textContent = "Erro de conexão.";
+          }
+
+          // Restaura o botão após 3 segundos
           setTimeout(() => {
-            // Restore to correct language text
             button.textContent = translations[currentLang]["form_btn"];
           }, 3000);
         });
