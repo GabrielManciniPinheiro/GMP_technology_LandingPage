@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0070f3" />
+    <meta
+      name="description"
+      content="Portfólio de Desenvolvedor Frontend - GMP Technology"
+    />
+    <link rel="stylesheet" href="build/tailwind.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>GMP Technology</title>
+  </head>
+
+  <body
+    class="font-sans text-gray-900 dark:text-white bg-white dark:bg-dark-background transition-colors duration-300"
+  >
+    <div
+      class="fixed inset-0 -z-10 opacity-0 dark:opacity-100 transition-opacity duration-500 pointer-events-none"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10"
+      ></div>
+    </div>
+
+    <header
+      class="fixed w-full top-0 z-50 bg-white/95 dark:bg-dark-background/95 backdrop-blur-sm shadow-sm transition-all duration-300"
+    >
+      <div class="container mx-auto px-4">
+        <nav class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <span class="text-xl font-extrabold">GMP Technology</span>
+            <img
+              src="../assets/gmp-logo-2.png"
+              alt="Logo GMP"
+              class="h-8 w-auto ml-2 object-contain"
+            />
+          </div>
+          <ul class="hidden md:flex space-x-8">
+            <li>
+              <a
+                href="#features"
+                data-translate="nav_showcase"
+                class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                >Vitrine</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                data-translate="nav_about"
+                class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                >Sobre</a
+              >
+            </li>
+            <li>
+              <a
+                href="#skills"
+                data-translate="nav_skills"
+                class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                >Habilidades</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                data-translate="nav_projects"
+                class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                >Projetos</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                data-translate="nav_contact"
+                class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                >Contato</a
+              >
+            </li>
+          </ul>
+          <div class="flex items-center space-x-4">
+            <button
+              id="langToggle"
+              class="text-2xl hover:scale-110 transition-transform px-2"
+              title="Mudar Idioma"
+            >
+              🇧🇷
+            </button>
+
+            <button id="themeToggle" class="">
+              <i class="fa-solid fa-moon text-gray-600 dark:text-gray-400"></i>
+            </button>
+            <button class="md:hidden p-2" id="menuToggle">
+              <div class="w-6 h-5 flex flex-col justify-between">
+                <span
+                  class="w-full h-0.5 bg-gray-600 dark:bg-gray-400 transition-all"
+                ></span>
+                <span
+                  class="w-full h-0.5 bg-gray-600 dark:bg-gray-400 transition-all"
+                ></span>
+                <span
+                  class="w-full h-0.5 bg-gray-600 dark:bg-gray-400 transition-all"
+                ></span>
+              </div>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 bg-white dark:bg-dark-background z-50 transform translate-x-full transition-transform duration-300 md:hidden"
+    >
+      <div class="container mx-auto px-4 h-full flex flex-col">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <span class="text-xl font-extrabold">GMP Technology</span>
+            <span class="text-primary text-2xl ml-1">●</span>
+          </div>
+          <button id="closeMenu" class="p-2">
+            <i
+              class="fa-solid fa-square-xmark text-gray-600 dark:text-gray-400 text-2xl"
+            ></i>
+          </button>
+        </div>
+        <ul class="flex-1 flex flex-col justify-center items-center space-y-8">
+          <li>
+            <a
+              href="#features"
+              data-translate="nav_showcase"
+              class="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+              >Vitrine</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              data-translate="nav_about"
+              class="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+              >Sobre</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skills"
+              data-translate="nav_skills"
+              class="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+              >Habilidades</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              data-translate="nav_projects"
+              class="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+              >Projetos</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              data-translate="nav_contact"
+              class="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+              >Contato</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section
+      id="hero"
+      class="min-h-screen flex items-center pt-20 pb-16 relative overflow-hidden"
+    >
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="flex justify-center mb-8">
+            <img
+              src="../assets/gmp-logo-3.png"
+              alt="GMP Technology Brand"
+              class="w-3/4 md:w-full max-w-4xl h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500 mx-auto"
+            />
+          </div>
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            <span data-translate="hero_title_1">O</span>
+            <span
+              class="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent"
+              data-translate="hero_title_highlight"
+              >Desenvolvedor React</span
+            >
+            <span data-translate="hero_title_2">Para a Web</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8">
+            <span data-translate="hero_subtitle_1">Criando</span>
+            <strong data-translate="hero_subtitle_bold"
+              >aplicações web de alta qualidade</strong
+            >
+            <span data-translate="hero_subtitle_2"
+              >com ferramentas modernas e as melhores práticas para experiências
+              excepcionais.</span
+            >
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <a
+              href="#projects"
+              data-translate="hero_view_projects"
+              class="px-8 py-3 bg-primary text-white rounded-lg shadow-lg hover:bg-blue-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-blue-300/30 dark:hover:shadow-blue-500/20 shadow-blue-200/20 dark:shadow-blue-700/10"
+            >
+              Ver Projetos
+            </a>
+            <a
+              href="#about"
+              data-translate="hero_learn_more"
+              class="px-8 py-3 bg-white dark:bg-dark-background-secondary text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 rounded-lg hover:border-gray-900 dark:hover:border-white transition-colors"
+              >Saiba Mais</a
+            >
+          </div>
+          <div
+            class="bg-gray-100 dark:bg-dark-background-secondary rounded-lg overflow-hidden shadow-lg max-w-2xl mx-auto"
+            id="terminal-container"
+          >
+            <div
+              class="flex items-center space-x-2 p-3 bg-gray-200 dark:bg-dark-background"
+            >
+              <span class="w-3 h-3 rounded-full bg-red-500"></span>
+              <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+              <span class="w-3 h-3 rounded-full bg-green-500"></span>
+            </div>
+            <div class="p-6 font-mono terminal-content">
+              <span class="text-green-500">$</span>
+              <span class="command-text text-gray-900 dark:text-white"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="features"
+      class="py-24 bg-gray-50 dark:bg-dark-background-secondary transition-all duration-500"
+    >
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center mb-4"
+          data-translate="features_title"
+        >
+          Meu Kit de Ferramentas
+        </h2>
+        <p
+          class="text-xl text-gray-600 dark:text-gray-400 text-center mb-16"
+          data-translate="features_subtitle"
+        >
+          Tudo o que é necessário para construir ótimos produtos na web.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-solid fa-paintbrush text-primary text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4" data-translate="feature_1_title">
+              Design de UI Moderno
+            </h3>
+            <p
+              class="text-gray-600 dark:text-gray-400"
+              data-translate="feature_1_desc"
+            >
+              Criando interfaces bonitas e responsivas que ficam ótimas em
+              qualquer dispositivo usando as últimas tendências.
+            </p>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-solid fa-code text-primary text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4" data-translate="feature_2_title">
+              Código Limpo
+            </h3>
+            <p
+              class="text-gray-600 dark:text-gray-400"
+              data-translate="feature_2_desc"
+            >
+              Escrevendo código sustentável e eficiente seguindo as melhores
+              práticas e padrões modernos.
+            </p>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-solid fa-bolt text-primary text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4" data-translate="feature_3_title">
+              Otimização de Performance
+            </h3>
+            <p
+              class="text-gray-600 dark:text-gray-400"
+              data-translate="feature_3_desc"
+            >
+              Garantindo carregamento rápido e experiências fluidas através de
+              código e assets otimizados.
+            </p>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-solid fa-mobile-alt text-primary text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4" data-translate="feature_4_title">
+              Desenvolvimento Responsivo
+            </h3>
+            <p
+              class="text-gray-600 dark:text-gray-400"
+              data-translate="feature_4_desc"
+            >
+              Construindo sites que funcionam perfeitamente em todos os tamanhos
+              de tela, de celulares a monitores grandes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-24 transition-all duration-500">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2
+              class="text-3xl md:text-4xl font-bold mb-6"
+              data-translate="about_title"
+            >
+              Sobre Mim
+            </h2>
+            <p
+              class="text-xl text-gray-600 dark:text-gray-400 mb-6"
+              data-translate="about_p1"
+            >
+              Sou um desenvolvedor frontend focado em criar experiências limpas
+              e amigáveis.
+            </p>
+            <p
+              class="text-gray-600 dark:text-gray-400 mb-6"
+              data-translate="about_p2"
+            >
+              Construo sites responsivos que são rápidos, fáceis de usar e
+              seguem as melhores práticas de codificação. Minha experiência
+              inclui HTML, CSS, JavaScript e frameworks modernos para criar
+              interfaces dinâmicas com código limpo.
+            </p>
+            <p
+              class="text-gray-600 dark:text-gray-400 mb-8"
+              data-translate="about_p3"
+            >
+              CEO - Gabriel Mancin Pinheiro
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#contact"
+                data-translate="about_contact_btn"
+                class="px-8 py-3 bg-primary text-white rounded-lg shadow-lg hover:bg-blue-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-blue-300/30 dark:hover:shadow-blue-500/20 shadow-blue-200/20 dark:shadow-blue-700/10 text-center"
+              >
+                Fale Comigo
+              </a>
+              <a
+                href="#"
+                data-translate="about_resume_btn"
+                class="px-8 py-3 bg-white dark:bg-dark-background-secondary text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 rounded-lg hover:border-gray-900 dark:hover:border-white transition-colors text-center"
+                >Baixar Currículo</a
+              >
+            </div>
+          </div>
+          <div class="relative">
+            <div
+              class="w-72 h-72 mx-auto animate-morph bg-gradient-to-br from-primary via-secondary to-accent rounded-full relative overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-primary/50 via-secondary/50 to-accent/50 rounded-full blur-2xl animate-morph"
+              ></div>
+              <img
+                src="../assets/foto-perfil.png"
+                alt="Profile Photo"
+                class="absolute inset-0 w-full h-full object-cover z-10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="skills"
+      class="py-24 bg-gray-50 dark:bg-dark-background-secondary transition-all duration-500"
+    >
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center mb-4"
+          data-translate="skills_title"
+        >
+          Principais Habilidades
+        </h2>
+        <p
+          class="text-xl text-gray-600 dark:text-gray-400 text-center mb-16"
+          data-translate="skills_subtitle"
+        >
+          Tecnologias e ferramentas que uso para dar vida a produtos
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-red-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-brands fa-html5 text-red-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">HTML5</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[80%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-brands fa-css3 text-blue-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">CSS3</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[80%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-yellow-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-brands fa-js text-yellow-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">JavaScript</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[85%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg"
+          >
+            <div
+              class="w-16 h-16 bg-blue-400/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-brands fa-react text-blue-400 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">React</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[100%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg"
+          >
+            <div
+              class="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-brands fa-github text-purple-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Github</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[90%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg"
+          >
+            <div
+              class="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-brands fa-node-js text-green-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Node.js</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[100%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg"
+          >
+            <div
+              class="w-16 h-16 bg-blue-600/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 fill-blue-600"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0H1.125zM11.523 14.235c.577-1.008 2.652-1.896 4.315-1.896 2.373 0 3.737 1.258 3.737 3.978v5.526h-2.38v-5.275c0-1.428-.596-2.162-1.789-2.162-1.293 0-2.339.957-2.339 2.597v4.84h-2.38v-8.786h2.38v1.178h.076zm-5.757-.962h2.51v8.786h-2.38v-7.1h-2.45v-1.686h4.77v.03l-2.45-.03z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4">TypeScript</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[90%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg"
+          >
+            <div
+              class="w-16 h-16 bg-gray-800/10 dark:bg-white/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <div
+                class="w-6 h-8 fill-gray-900 dark:fill-white"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <i class="fa-solid fa-n text-white-500 text-3xl"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Next.js</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[95%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg"
+          >
+            <div
+              class="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-solid fa-desktop text-orange-500 text-3xl"></i>
+            </div>
+            <h3
+              class="text-xl font-bold mb-4"
+              data-translate="skill_responsive"
+            >
+              Design Responsivo
+            </h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[95%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-24 transition-all duration-500">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center mb-4"
+          data-translate="projects_title"
+        >
+          Projetos em Destaque
+        </h2>
+        <p
+          class="text-xl text-gray-600 dark:text-gray-400 text-center mb-16"
+          data-translate="projects_subtitle"
+        >
+          Confira alguns dos nossos trabalhos recentes
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white dark:bg-dark-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div class="h-48 relative">
+              <img
+                src="../assets/barberbanner2.png"
+                alt="Barber Saas"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-4" data-translate="proj_1_title">
+                GMP Barber
+              </h3>
+              <p
+                class="text-gray-600 dark:text-gray-400 mb-4 h-16"
+                data-translate="proj_1_desc"
+              >
+                Um Saas moderno de agendamento para barbearias com dashboard
+                administrativo em tempo real.
+              </p>
+              <div class="flex flex-wrap gap-2 my-11">
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >React</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >Next.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >JavaScript</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >TypeScript</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >Node.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >Tailwind</span
+                >
+              </div>
+              <div class="flex gap-4">
+                <a
+                  href="https://barber.gmpsaas.com/"
+                  class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  Link
+                </a>
+                <a
+                  href="#"
+                  class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >
+                  <i class="fa-brands fa-github mr-2"></i>
+                  Code
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div class="h-48 relative">
+              <img
+                src="../assets/wellnessbanner.png"
+                alt="Wellness Saas"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-4" data-translate="proj_2_title">
+                GMP Wellness
+              </h3>
+              <p
+                class="text-gray-600 dark:text-gray-400 mb-4 h-16"
+                data-translate="proj_2_desc"
+              >
+                Saas de agendamento para clinicas de estética com dashboard
+                administrativo em tempo real e envio de emails de confirmação
+              </p>
+              <div class="flex flex-wrap gap-3 my-11">
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >React</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >Next.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >JavaScript</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >TypeScript</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >Tailwind</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >Node.js</span
+                >
+              </div>
+              <div class="flex gap-4">
+                <a
+                  href="https://wellness.gmpsaas.com/"
+                  class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  Link
+                </a>
+                <a
+                  href="#"
+                  class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >
+                  <i class="fa-brands fa-github mr-2"></i>
+                  Code
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div class="h-48 relative">
+              <img
+                src="../assets/fastfoodsbanner2.png"
+                alt="Fastfoods Totem"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-4" data-translate="proj_3_title">
+                GMP Fastfoods
+              </h3>
+              <p
+                class="text-gray-600 dark:text-gray-400 mb-4 h-16"
+                data-translate="proj_3_desc"
+              >
+                Um sistema de totem de pedidos para fastfoods integrado com
+                gateway de pagamento!
+              </p>
+              <div class="flex flex-wrap gap-2 my-7">
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >React</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >Next.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >JavaScript</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >TypeScript</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >Tailwind</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >Node.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >Stripe</span
+                >
+              </div>
+              <div class="flex gap-4">
+                <a
+                  href="https://fastfoods.gmpsaas.com/gmp-fastfoods"
+                  class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  Link
+                </a>
+                <a
+                  href="#"
+                  class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >
+                  <i class="fa-brands fa-github mr-2"></i>
+                  Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-24 transition-all duration-500">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center mb-4"
+          data-translate="contact_title"
+        >
+          Entre em Contato
+        </h2>
+        <p
+          class="text-xl text-gray-600 dark:text-gray-400 text-center mb-16"
+          data-translate="contact_subtitle"
+        >
+          Interessado em criar sua solução? Vamos conversar!
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div
+            class="lg:col-span-1 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-6"
+          >
+            <div
+              class="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg text-center"
+            >
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fa-solid fa-envelope text-primary text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Email</h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                gabrielmp2709@gmail.com
+              </p>
+            </div>
+            <div
+              class="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg text-center"
+            >
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i
+                  class="fa-solid fa-map-location-dot text-primary text-xl"
+                ></i>
+              </div>
+              <h3
+                class="text-xl font-bold mb-2"
+                data-translate="contact_location"
+              >
+                Localização
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400">São Paulo - SP</p>
+            </div>
+            <div
+              class="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg text-center"
+            >
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fa-solid fa-globe text-primary text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Social</h3>
+              <div class="flex justify-center space-x-4">
+                <a
+                  href="https://github.com/GabrielManciniPinheiro"
+                  class="w-10 h-10 bg-gray-100 dark:bg-dark-background-secondary rounded-full flex items-center justify-center text-gray-600 hover:text-primary dark:hover:text-primary dark:text-gray-400 transition-all duration-300"
+                >
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/gabriel-mancin-pinheiro"
+                  class="w-10 h-10 bg-gray-100 dark:bg-dark-background-secondary rounded-full flex items-center justify-center text-gray-600 hover:text-primary dark:hover:text-primary dark:text-gray-400 transition-all duration-300"
+                >
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-gray-100 dark:bg-dark-background-secondary rounded-full flex items-center justify-center text-gray-600 hover:text-primary dark:hover:text-primary dark:text-gray-400 transition-all duration-300"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-2">
+            <form
+              id="contactForm"
+              class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg"
+            >
+              <h3 class="text-2xl font-bold mb-6" data-translate="form_title">
+                Envie uma Mensagem
+              </h3>
+              <div class="space-y-6">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    data-translate="form_name"
+                    >Nome</label
+                  >
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    required
+                    class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-dark-background-secondary text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors outline-none"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                    class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-dark-background-secondary text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors outline-none"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="message"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    data-translate="form_message"
+                    >Mensagem</label
+                  >
+                  <textarea
+                    type="text"
+                    name="message"
+                    id="message"
+                    rows="5"
+                    required
+                    class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-dark-background-secondary text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors outline-none"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  data-translate="form_btn"
+                  class="w-full px-8 py-3 bg-primary text-white rounded-lg shadow-lg hover:bg-blue-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-blue-300/30 dark:hover:shadow-blue-500/20 shadow-blue-200/20 dark:shadow-blue-700/10"
+                >
+                  Enviar Mensagem
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-50 dark:bg-dark-background-secondary py-12">
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center mb-8"
+        >
+          <div class="flex items-center mb-4 md:mb-0">
+            <span class="text-xl font-extrabold">GMP Technology</span>
+            <img
+              src="../assets/gmp-logo-2.png"
+              alt="Logo GMP"
+              class="h-8 w-auto ml-2 object-contain"
+            />
+          </div>
+          <ul class="flex flex-wrap justify-center gap-6 mb-0">
+            <li>
+              <a
+                href="#features"
+                data-translate="nav_showcase"
+                class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >Vitrine</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                data-translate="nav_about"
+                class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >Sobre</a
+              >
+            </li>
+            <li>
+              <a
+                href="#skills"
+                data-translate="nav_skills"
+                class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >Habilidades</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                data-translate="nav_projects"
+                class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >Projetos</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                data-translate="nav_contact"
+                class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >Contato</a
+              >
+            </li>
+          </ul>
+          <div class="flex gap-4">
+            <a
+              href="https://github.com/GabrielManciniPinheiro"
+              class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/gabriel-mancin-pinheiro"
+              class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="text-center text-gray-600 dark:text-gray-400 text-sm">
+          <p data-translate="footer_copy">Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
