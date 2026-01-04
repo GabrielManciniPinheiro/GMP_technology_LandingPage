@@ -415,4 +415,18 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(typeCommand, 1000);
     }
   }
+  // --- EFEITO DE SCROLL NO LOGO HERO ---
+  const heroLogo = document.getElementById("hero-logo");
+  // Pegamos o container do texto (o pai do logo) para centralizar O CONTEÚDO TODO, não só a imagem
+  const heroContent = document.querySelector("#hero .max-w-4xl");
+
+  if (heroLogo && heroContent) {
+    heroLogo.addEventListener("click", () => {
+      // Esta função rola a tela suavemente até que o elemento esteja no centro vertical
+      heroContent.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    });
+  }
 });
