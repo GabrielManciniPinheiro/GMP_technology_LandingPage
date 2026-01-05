@@ -183,8 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
         feature_4_desc:
           "Building websites that work flawlessly across all screen sizes, from phones to large displays.",
         about_title: "About Us",
-        about_p1:
-          "Developers focused on crafting clean and scalable experiences.",
+        about_p1: "Focused on crafting clean and scalable experiences.",
         about_p2:
           "We build responsive websites that are fast, easy to use, and follow best coding practices. Our experience includes React, Next.js, TypeScript, HTML, CSS, JavaScript, and modern frameworks to create dynamic interfaces with clean code.",
         about_p3: "CEO - Gabriel Mancin Pinheiro",
@@ -246,8 +245,7 @@ document.addEventListener("DOMContentLoaded", function () {
         feature_4_desc:
           "Construindo sites que funcionam perfeitamente em todos os tamanhos de tela, de celulares a monitores grandes.",
         about_title: "Sobre Nós",
-        about_p1:
-          "Desenvolvedores focados em criar experiências limpas e escaláveis.",
+        about_p1: "Focados em criar experiências limpas e escaláveis.",
         about_p2:
           "Construimos sites responsivos que são rápidos, fáceis de usar e seguem as melhores práticas de codificação. Nossa experiência inclui React, Next.js, Typescript, HTML, CSS, JavaScript e frameworks modernos para criar interfaces dinâmicas com código limpo.",
         about_p3: "CEO - Gabriel Mancin Pinheiro",
