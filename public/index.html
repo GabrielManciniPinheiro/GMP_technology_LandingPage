@@ -415,28 +415,39 @@
                   </svg>
                 </button>
 
-                <div
-                  id="resume-menu"
-                  class="hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-dark-background-secondary border border-gray-200 dark:border-gray-700 z-50"
-                >
-                  <div class="py-1">
-                    <a
-                      href="CV_Gabriel_Mancin_PTBR_React_Typescript_pdf.pdf"
-                      download="CV_Gabriel_Mancin_PTBR_.pdf"
-                      class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
-                    >
-                      Português (PT-BR)
-                    </a>
-                    <a
-                      href="CV_Gabriel_Mancin_English_React_Typescript.pdf"
-                      download="CV_GabrieL_Mancini_English.pdf"
-                      class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
-                    >
-                      English (EN)
-                    </a>
-                  </div>
-                </div>
-              </div>
+                <div class="relative inline-block text-left">
+  <button 
+    id="resume-dropdown-btn"
+    class="flex items-center justify-between gap-3 min-w-[160px] px-5 py-3 bg-white dark:bg-dark-background-secondary text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 rounded-lg hover:border-gray-900 dark:hover:border-white transition-all text-center"
+  >
+    <span data-translate="about_resume_btn" class="text-sm font-medium">Baixar Currículo</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+
+  <div 
+    id="resume-menu" 
+    class="hidden absolute left-0 mt-2 w-full rounded-md shadow-xl bg-white dark:bg-dark-background-secondary border border-gray-200 dark:border-gray-700 z-50 overflow-hidden"
+  >
+    <div class="flex flex-col">
+      <a 
+        href="CV_Gabriel_Mancin_PTBR_React_Typescript_pdf.pdf" 
+        download="CV_Gabriel_Mancin_PTBR.pdf"
+        class="block px-4 py-3 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors border-b border-gray-100 dark:border-gray-700"
+      >
+        Português (PT-BR)
+      </a>
+      <a 
+        href="CV_Gabriel_Mancin_English_React_Typescript.pdf" 
+        download="CV_Gabriel_Mancini_English.pdf"
+        class="block px-4 py-3 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+      >
+        English (EN)
+      </a>
+    </div>
+  </div>
+</div>
             </div>
           </div>
           <div class="relative">

@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Check for saved theme preference or prefer-color-scheme
       const savedTheme = localStorage.getItem("theme");
       const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
+        "(prefers-color-scheme: dark)",
       ).matches;
 
       // Apply theme based on saved preference or system preference
@@ -295,6 +295,33 @@ document.addEventListener("DOMContentLoaded", function () {
           if (translations[lang] && translations[lang][key]) {
             el.textContent = translations[lang][key];
           }
+        });
+
+        const dropdownBtn = document.getElementById("resume-dropdown-btn");
+        const resumeMenu = document.getElementById("resume-menu");
+
+        // Abre/Fecha o menu ao clicar no botão
+        dropdownBtn.addEventListener("click", (e) => {
+          e.stopPropagation(); // Impede o clique de propagar para o window
+          resumeMenu.classList.toggle("hidden");
+        });
+
+        // Fecha o menu se clicar fora dele
+        window.addEventListener("click", () => {
+          if (!resumeMenu.classList.contains("hidden")) {
+            resumeMenu.classList.add("hidden");
+          }
+        });
+
+        dropdownBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          resumeMenu.classList.toggle("hidden");
+          // Gira a seta 180 graus
+          const icon = dropdownBtn.querySelector("svg");
+          icon.style.transform = resumeMenu.classList.contains("hidden")
+            ? "rotate(0deg)"
+            : "rotate(180deg)";
+          icon.style.transition = "transform 0.2s ease";
         });
 
         // Save preference
